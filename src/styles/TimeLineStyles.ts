@@ -22,5 +22,7 @@ export const TimelineEntry = styled.div<TimelineEntryProps>`
   border: 1px solid #ccc;
   margin: 5px 0;
 
-  ${(props) => (props.balance >= 0 ? positiveStyle : negativeStyle)}
+  ${({ balance }) => {
+    return balance >= 0 ? positiveStyle : negativeStyle;
+  }}
 `;
